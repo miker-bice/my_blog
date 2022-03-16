@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
+    'blogApp.apps.BlogappConfig',
 ]
 
 # tailwind app name
