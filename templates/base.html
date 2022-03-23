@@ -12,11 +12,12 @@
 	</head>
 	<body class="bg-white leading-normal tracking-normal">
 		{% include 'includes/navbar_component.html' %}
-        <div>
+        <div class="min-h-screen">
             {% block content %}
             {% endblock %}
         </div>
-    
+		
+		{% include 'includes/footer.html' %}
 		<script src="{% static 'js/base.js' %}"></script>
 	</body>
 </html>
