@@ -1,7 +1,26 @@
 {% extends 'base.html' %}
-{% block title %}
-    <title>Mike Galindez | Home</title>
-{% endblock %}
-{% block content %}
-    <h1>this is the home of the blog content</h1>
+{% load static %} {% block title %}
+<title>Mike Galindez | Home</title>
+{% endblock %} {% block content %}
+<!-- This is the hero section of the web app -->
+<div class="grid mt-10">
+  <div class="text-center">
+    <h1 class="font-semibold text-5xl text-gray-700">Hi There busy Human!</h1>
+    <h2 class="text-sm my-5">
+      I am Jerrson and welcome to my simple blog website. <br />
+      You're free to critique, don't be shy.
+    </h2>
+    <div class="block my-5">
+      <a
+        href=""
+        class="block w-full bg-blue-600 text-white uppercase font-semibold py-3 rounded-lg hover:bg-blue-800 trnasition delay-200"
+        >Read my blogs</a>
+    </div>
+  </div>
+  <div>
+    <img src="{% static 'images/main-astronaut.png' %}" alt="main-astronaut" class="">
+    <h4>this is the image</h4>
+    
+  </div>
+</div>
 {% endblock %}

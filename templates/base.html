@@ -1,4 +1,5 @@
 {% load static tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,9 +11,9 @@
         {% block title %}
         {% endblock %}
 	</head>
-	<body class="bg-white leading-normal tracking-normal">
+	<body class="bg-white leading-normal tracking-normal overflow-x-hidden">
 		{% include 'includes/navbar_component.html' %}
-        <div class="min-h-screen">
+        <div class="min-h-screen px-10 py-7 text-gray-500 dark:text-gray-100">
             {% block content %}
             {% endblock %}
         </div>
