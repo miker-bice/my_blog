@@ -1,15 +1,15 @@
-<section id="recent-blogs">
+<section id="recent-blogs" class="my-5">
   <div>
     <!-- these are the recently added blog items -->
     <div class="">
-      <h3 class="uppercase font-bold text-xl">Recent Blogs</h3>
+      <h3 class="uppercase font-bold text-xl mb-3">Recent Blogs</h3>
       <hr class="w-1/4" />
     </div>
 
     <!-- blog cards container -->
     <div class="py-5 px-2">
       <!-- here goes blog cards -->
-      <div class="">
+      <div class="grid gap-5 sm:grid-cols-2">
         {% include 'blogApp/includes/blog_item.html' %}
       </div>
     </div>
