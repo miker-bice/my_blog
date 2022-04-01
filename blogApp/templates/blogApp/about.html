@@ -1,6 +1,9 @@
-{% extends 'base.html' %} {% block title %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}
 <title>About</title>
-{% endblock title %} {% block content %}
+{% endblock title %} 
+{% block content %}
 <div>
   <!-- this is the main about section -->
   <div>
@@ -127,7 +130,29 @@
       <a href="https://www.freepik.com/" class="text-purple-700 font-bold"
         >Freepik</a
       >.
+      <br />
+      <br />
+      Here are some of the amazing artworks:
     </p>
+    <!-- here goes the artist artworks -->
+    
+    <!-- artworks container -->
+    <div class="grid grid-cols-3 gap-1 my-4">
+      <!-- art cards go here | insert context data here -->
+      <!-- this is the first artwork -->
+      <div>
+        <a href=""><img src="{% static 'images/astro-2.png' %}" alt="astronaut-2" class="w-full"></a>
+      </div>
+
+      <div>
+        <a href=""><img src="{% static 'images/astro-3.png' %}" alt="astronaut-3" class="w-full"></a>
+      </div>
+
+      <div>
+        <a href=""><img src="{% static 'images/astro-4.png' %}" alt="astronaut-4" class="w-full"></a>
+      </div>
+      
+    </div>
   </div>
 </div>
-{% endblock content %}
+{% endblock %}
