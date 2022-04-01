@@ -1,9 +1,6 @@
-{% extends 'base.html' %} 
-{% load static %}
-{% block title %}
+{% extends 'base.html' %} {% load static %} {% block title %}
 <title>About</title>
-{% endblock title %} 
-{% block content %}
+{% endblock title %} {% block content %}
 <div>
   <!-- this is the main about section -->
   <div>
@@ -18,7 +15,7 @@
       <div class="my-5">
         <h3 class="font-bold mb-4">Front-End</h3>
         <!-- cards container -->
-        <div class="px-4 grid grid-cols-2 gap-5 md:grid-cols-4">
+        <div class="px-4 md:px-10 grid grid-cols-2 gap-5 md:grid-cols-4">
           <!-- cards go here -->
           <div
             class="text-center px-2 py-4 rounded-lg bg-gray-50 shadow-md hover:shadow-lg"
@@ -70,7 +67,7 @@
       <div class="my-5">
         <h3 class="font-bold mb-4">Back-End</h3>
         <!-- cards container -->
-        <div class="px-4 grid grid-cols-3 gap-5">
+        <div class="px-4 md:px-10 grid grid-cols-3 gap-5">
           <!-- cards go here -->
           <div
             class="text-center px-2 py-4 rounded-lg bg-gray-50 shadow-md hover:shadow-lg"
@@ -126,7 +123,7 @@
         ></strong
       >. <br />
       <br />
-      Check her very lovely works over at
+      Check the very lovely works over at
       <a href="https://www.freepik.com/" class="text-purple-700 font-bold"
         >Freepik</a
       >.
@@ -135,23 +132,40 @@
       Here are some of the amazing artworks:
     </p>
     <!-- here goes the artist artworks -->
-    
+
     <!-- artworks container -->
-    <div class="grid grid-cols-3 gap-1 my-4">
+    <div class="grid grid-cols-3 gap-2 my-4 px-2 md:px-8">
       <!-- art cards go here | insert context data here -->
       <!-- this is the first artwork -->
       <div>
-        <a href=""><img src="{% static 'images/astro-2.png' %}" alt="astronaut-2" class="w-full"></a>
+        <a
+          href="https://www.freepik.com/free-vector/happy-astronaut-jumping-cartoon-vector-icon-illustration-science-technology-icon-concept-isolated-premium-vector-flat-cartoon-style_18790456.htm#query=astronaut%20illustration&position=2&from_view=search"
+          ><img
+            src="{% static 'images/astro-2.png' %}"
+            alt="astronaut-2"
+            class="w-full"
+        /></a>
       </div>
 
       <div>
-        <a href=""><img src="{% static 'images/astro-3.png' %}" alt="astronaut-3" class="w-full"></a>
+        <a
+          href="https://www.freepik.com/free-vector/astronaut-dabbing-cartoon-vector-icon-illustration-science-technology-icon-concept-isolated-premium-vector-flat-cartoon-style_16304150.htm#query=astronaut%20illustration&position=4&from_view=search"
+          ><img
+            src="{% static 'images/astro-3.png' %}"
+            alt="astronaut-3"
+            class="w-full"
+        /></a>
       </div>
 
       <div>
-        <a href=""><img src="{% static 'images/astro-4.png' %}" alt="astronaut-4" class="w-full"></a>
+        <a
+          href="https://www.freepik.com/free-vector/cute-astronaut-flying-space-cartoon-icon-illustration_12681140.htm#query=astronaut%20illustration&position=43&from_view=search"
+          ><img
+            src="{% static 'images/astro-4.png' %}"
+            alt="astronaut-4"
+            class="w-full"
+        /></a>
       </div>
-      
     </div>
   </div>
 </div>
