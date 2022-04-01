@@ -1,7 +1,20 @@
 {% extends 'base.html' %} {% block title %}
 <title>Blogs</title>
 {% endblock title %} {% block content %}
-<div>
-  <h4>this is the blog page right here</h4>
+<div class="my-10">
+  <!-- this is the blog section -->
+  <div>
+    <h2 class="font-bold text-6xl text-gray-700">The Blog</h2>
+    <p class="my-4 md:w-1/2">
+      And here we are now, on the blog section of the website. <br />
+      My blogs are a mix of articles of varying topics which you may find
+      interesting as they are from the experiences of a frustrated programmer.
+    </p>
+
+    <!-- latest blogs -->
+    <div>
+      {% include 'blogApp/includes/latest_blogs.html' %} 
+    </div>
+  </div>
 </div>
 {% endblock content %}
