@@ -17,6 +17,8 @@ class Article(models.Model):
     title = models.CharField(max_length=200, blank=False)
     body = tinymce_models.HTMLField(blank=False)
     image_url = models.URLField(max_length=2000, blank=False)
+    active = models.BooleanField(default=False)
+    featured = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, blank=False)
     tags = models.ManyToManyField(Tag)
 

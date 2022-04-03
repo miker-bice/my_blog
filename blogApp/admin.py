@@ -7,7 +7,7 @@ class TagAdmin(admin.ModelAdmin):
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('user_id', 'title', 'timestamp')
+    list_display = ('user_id', 'title', 'featured', 'active', 'timestamp')
 
 
 # Register your models here.

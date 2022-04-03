@@ -12,14 +12,17 @@
   <div class="px-4 py-4">
     <h4 class="font-bold text-xl">{{ item.title }}</h4>
     <h5 class="text-xs">{{ item.timestamp }} by <strong>Author</strong></h5>
-    <p class="text-sm my-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis
-      pariatur quod dicta deleniti fugiat.
+    <p class="text-xs my-2">
+      {{ item.body | safe }}
     </p>
     <a href="#" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
     <!-- this is the tags on each blog item -->
     <div class="flex flex-wrap mt-2">
+        {% for tag in item.tags.all %}
             {% include 'blogApp/includes/tag.html' %}
+        {% endfor %}
+        
+
     </div>
   </div>
 </div>
