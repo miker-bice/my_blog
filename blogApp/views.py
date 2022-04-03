@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import Article
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'blogApp/home.html', {})
+    all_blog_items = Article.objects.all().order_by('timestamp')
+    context = {
+        'items': all_blog_items
+    }
+    return render(request, 'blogApp/home.html', context)
 
 
 def about(request):

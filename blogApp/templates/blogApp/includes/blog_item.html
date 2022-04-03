@@ -4,14 +4,14 @@
 >
   <div>
     <img
-      src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?cs=srgb&dl=pexels-olia-danilevich-4974912.jpg&fm=jpg"
+      src="{{ item.image_url }}"
       alt="blog-img"
       class="object-cover w-52 h-full lg:w-72 hidden sm:block"
     />
   </div>
   <div class="px-4 py-4">
-    <h4 class="font-bold text-xl">This is a blog title</h4>
-    <h5 class="text-xs">March 26, 2022 by <strong>Author</strong></h5>
+    <h4 class="font-bold text-xl">{{ item.title }}</h4>
+    <h5 class="text-xs">{{ item.timestamp }} by <strong>Author</strong></h5>
     <p class="text-sm my-2">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis
       pariatur quod dicta deleniti fugiat.
@@ -19,83 +19,8 @@
     <a href="#" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
     <!-- this is the tags on each blog item -->
     <div class="flex flex-wrap mt-2">
-      {% include 'blogApp/includes/tag.html' %}
+            {% include 'blogApp/includes/tag.html' %}
     </div>
   </div>
 </div>
 
-<!-- https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?cs=srgb&dl=pexels-olia-danilevich-4974912.jpg&fm=jpg -->
-
-<!-- this is just for testing -->
-<div
-  class="flex overflow-hidden rounded-lg shadow-lg bg-gray-50 hover:shadow-xl"
->
-  <div>
-    <img
-      src="https://images.pexels.com/photos/6195663/pexels-photo-6195663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="blog-img"
-      class="object-cover w-52 h-full lg:w-72 hidden sm:block"
-    />
-  </div>
-  <div class="px-4 py-4">
-    <h4 class="font-bold text-xl">This is a blog title</h4>
-    <h5 class="text-xs">March 26, 2022 by <strong>Author</strong></h5>
-    <p class="text-sm my-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis
-      pariatur quod dicta deleniti fugiat.
-    </p>
-    <a href="#" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
-    <div class="flex flex-wrap mt-2">
-      {% include 'blogApp/includes/tag.html' %}
-    </div>
-  </div>
-</div>
-
-<div
-  class="flex overflow-hidden rounded-lg shadow-lg bg-gray-50 hover:shadow-xl"
->
-  <div>
-    <img
-      src="https://images.pexels.com/photos/6195663/pexels-photo-6195663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="blog-img"
-      class="object-cover w-52 h-full lg:w-72 hidden sm:block"
-    />
-  </div>
-  <div class="px-4 py-4">
-    <h4 class="font-bold text-xl">This is a blog title</h4>
-    <h5 class="text-xs">March 26, 2022 by <strong>Author</strong></h5>
-    <p class="text-sm my-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis
-      pariatur quod dicta deleniti fugiat.
-    </p>
-    <a href="#" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
-    <div class="flex flex-wrap mt-2">
-      {% include 'blogApp/includes/tag.html' %}
-    </div>
-  </div>
-</div>
-
-<div
-  class="flex overflow-hidden rounded-lg shadow-lg bg-gray-50 hover:shadow-xl"
->
-  <div>
-    <img
-      src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?cs=srgb&dl=pexels-olia-danilevich-4974912.jpg&fm=jpg"
-      alt="blog-img"
-      class="object-cover w-52 h-full lg:w-72 hidden sm:block"
-    />
-  </div>
-  <div class="px-4 py-4">
-    <h4 class="font-bold text-xl">This is a blog title</h4>
-    <h5 class="text-xs">March 26, 2022 by <strong>Author</strong></h5>
-    <p class="text-sm my-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, corporis
-      pariatur quod dicta deleniti fugiat.
-    </p>
-    <a href="#" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
-    {# this is the tags on each blog item#}
-    <div class="flex flex-wrap mt-2">
-      {% include 'blogApp/includes/tag.html' %}
-    </div>
-  </div>
-</div>

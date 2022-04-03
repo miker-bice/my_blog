@@ -26,5 +26,8 @@
   </div>
 </div>
 <!-- here goes the recent blog items -->
-{% include 'blogApp/includes/recent_blogs.html' %} 
+    {% for item in items %}
+        {% include 'blogApp/includes/recent_blogs.html' %}
+    {% endfor %}
+
 {% endblock %}
