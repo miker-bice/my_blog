@@ -31,7 +31,9 @@
     <div class="py-5 px-4">
       <!-- here goes blog cards -->
       <div class="grid gap-5 md:grid-cols-2">
-        {% include 'blogApp/includes/blog_item.html' %}
+        {% for item in items %}
+          {% include 'blogApp/includes/blog_item.html' %}
+        {% endfor %}
       </div>
     </div>
   </div>

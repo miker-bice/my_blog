@@ -11,7 +11,7 @@
   </div>
   <div class="px-4 py-4">
     <h4 class="font-bold text-xl">{{ item.title }}</h4>
-    <h5 class="text-xs">{{ item.timestamp }} by <strong>Author</strong></h5>
+    <h5 class="text-xs">{{ item.timestamp }} by <strong>{{ item.user_id.first_name }}</strong></h5>
     <p class="text-xs my-2">
       {{ item.body | safe | truncatechars_html:70 }}
     </p>

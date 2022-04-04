@@ -23,7 +23,7 @@ def blogs(request):
     latest_blog = Article.objects.last()
 
     # this is for all the active blogs published
-    all_items = Article.objects.filter(active=True)
+    all_items = Article.objects.filter(active=True).order_by('-timestamp')[1:]
 
     context = {
         'latest_item': latest_blog,
