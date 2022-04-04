@@ -12,8 +12,9 @@
       <div class="grid gap-5 md:grid-cols-2">
           {% for item in items %}
               {% include 'blogApp/includes/blog_item.html' %}
+          <!-- This handles the empty state of the website -->
           {% empty %}
-              
+          
               {% include 'blogApp/includes/empty_state.html' %}
               
           {% endfor %}
