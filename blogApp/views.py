@@ -19,4 +19,14 @@ def about(request):
 
 
 def blogs(request):
-    return render(request, 'blogApp/blogs.html', {})
+    # this is for the latest blogs
+    latest_blog = Article.objects.last()
+
+    # this is for all the active blogs published
+    all_items = Article.objects.filter(active=True)
+
+    context = {
+        'latest_item': latest_blog,
+        'items': all_items,
+    }
+    return render(request, 'blogApp/blogs.html', context)

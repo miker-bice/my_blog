@@ -3,6 +3,7 @@
 {% endblock title %} {% block content %}
 <div class="my-10">
   <!-- this is the blog section -->
+  
   <div>
     <h2 class="font-bold text-6xl text-gray-700">The Blog</h2>
     <p class="my-4 md:w-1/2">
@@ -12,10 +13,12 @@
     </p>
 
     <!-- latest blogs -->
+    {% for item in items %}
       <!-- *** insert the for loop here -->
     <div>
       {% include 'blogApp/includes/latest_blogs.html' %} 
     </div>
+    {% endfor %}
       <!-- *** endfor -->
   </div>
 </div>
