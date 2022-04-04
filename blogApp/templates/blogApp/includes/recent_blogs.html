@@ -14,11 +14,13 @@
               {% include 'blogApp/includes/blog_item.html' %}
           <!-- This handles the empty state of the website -->
           {% empty %}
-          
+              <div class="col-span-3">
               {% include 'blogApp/includes/empty_state.html' %}
-              
+              </div>
           {% endfor %}
       </div>
+
+
     </div>
 
     <!-- this is the see more button -->
