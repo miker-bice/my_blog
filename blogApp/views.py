@@ -5,7 +5,7 @@ from .models import Article
 
 # Create your views here.
 def home(request):
-    all_blog_items = Article.objects.all().order_by('-timestamp')
+    all_blog_items = Article.objects.filter(active=True, featured=True).order_by('-timestamp')
     author_name = User.get_full_name
     context = {
         'items': all_blog_items,

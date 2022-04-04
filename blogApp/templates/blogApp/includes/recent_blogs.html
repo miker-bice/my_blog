@@ -12,6 +12,10 @@
       <div class="grid gap-5 md:grid-cols-2">
           {% for item in items %}
               {% include 'blogApp/includes/blog_item.html' %}
+          {% empty %}
+              
+              {% include 'blogApp/includes/empty_state.html' %}
+              
           {% endfor %}
       </div>
     </div>
