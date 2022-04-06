@@ -30,3 +30,7 @@ def blogs(request):
         'items': all_items,
     }
     return render(request, 'blogApp/blogs.html', context)
+
+
+def blog(request, id):
+    return render(request, 'blogApp/blog.html', {})
