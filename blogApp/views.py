@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
 from .models import Article
 
@@ -33,4 +33,8 @@ def blogs(request):
 
 
 def blog(request, blog_id):
-    return render(request, 'blogApp/blog.html', {})
+    item = get_object_or_404(Article, pk=blog_id)
+    context = {
+        'item': item
+    }
+    return render(request, 'blogApp/blog.html', context)
