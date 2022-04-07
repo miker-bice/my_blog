@@ -32,5 +32,5 @@ def blogs(request):
     return render(request, 'blogApp/blogs.html', context)
 
 
-def blog(request, id):
+def blog(request, blog_id):
     return render(request, 'blogApp/blog.html', {})
