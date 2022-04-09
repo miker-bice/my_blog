@@ -5,7 +5,7 @@ from .models import Article
 
 # Create your views here.
 def home(request):
-    all_blog_items = Article.objects.filter(active=True, featured=True).order_by('-timestamp')
+    all_blog_items = Article.objects.filter(active=True, featured=True).order_by('-timestamp')[:4]
     author_name = User.get_full_name
     context = {
         'items': all_blog_items,
@@ -20,7 +20,7 @@ def about(request):
 
 def blogs(request):
     # this is for the latest blogs
-    latest_blog = Article.objects.last()
+    latest_blog = Article.objects.filter(active=True).last()
 
     # this is for all the active blogs published
     all_items = Article.objects.filter(active=True).order_by('-timestamp')[1:]
