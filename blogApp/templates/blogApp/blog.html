@@ -12,10 +12,10 @@
   ></div>
   <!-- this is the blog contents -->
   <!-- insert context data here -->
-  <div class="px-4 py-4 text-gray-400">
-    <h4 class="font-bold text-4xl text-gray-500">{{ item.title }}</h4>
+  <div class="px-4 py-4 text-gray-400 dark:text-gray-200">
+    <h4 class="font-bold text-4xl text-gray-500 dark:text-gray-200">{{ item.title }}</h4>
     <h5 class="text-xs my-4">
-      {{ item.timestamp }} by <strong>{{ item.user_id.get_full_name }}</strong>
+      {{ item.timestamp }} by <strong class="dark:text-purple-500">{{ item.user_id.get_full_name }}</strong>
     </h5>
     <p class="text-md my-4 md:w-3/4">
       {{ item.body | safe }}
