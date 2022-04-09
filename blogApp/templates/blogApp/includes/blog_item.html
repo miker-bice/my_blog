@@ -1,6 +1,6 @@
 <!-- insert context data here -->
 <div
-  class="flex overflow-hidden rounded-lg shadow-lg bg-gray-50 hover:shadow-xl"
+  class="flex overflow-hidden rounded-lg shadow-lg bg-gray-50 hover:shadow-xl dark:bg-slate-700"
 >
   <div>
     <img
@@ -10,20 +10,23 @@
     />
   </div>
   <div class="px-4 py-4">
-    <h4 class="font-bold text-xl">{{ item.title }}</h4>
-    <h5 class="text-xs">{{ item.timestamp }} by <strong>{{ item.user_id.first_name }}</strong></h5>
+    <h4 class="font-bold text-2xl">{{ item.title }}</h4>
+    <h5 class="text-xs">
+      {{ item.timestamp }} by <strong>{{ item.user_id.first_name }}</strong>
+    </h5>
     <p class="text-xs my-2">
       {{ item.body | safe | truncatechars_html:70 }}
+      <a
+        href="{% url 'blogApp:blog' item.id %}"
+        class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold dark:text-purple-600 dark:hover:text-purple-400"
+        >Read More</a
+      >
     </p>
-    <a href="{% url 'blogApp:blog' item.id %}" class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold">Read More</a>
+
     <!-- this is the tags on each blog item -->
     <div class="flex flex-wrap mt-2">
-        {% for tag in item.tags.all %}
-            {% include 'blogApp/includes/tag.html' %}
-        {% endfor %}
-        
-
+      {% for tag in item.tags.all %} {% include 'blogApp/includes/tag.html' %}
+      {% endfor %}
     </div>
   </div>
 </div>
-
