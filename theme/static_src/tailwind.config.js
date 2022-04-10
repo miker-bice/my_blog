@@ -42,7 +42,12 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                RobotoMono: ['Roboto Mono', 'monospace'],
+                Sanchez: ['Sanchez', 'serif'],
+            },
+        },
     },
     plugins: [
         /**
