@@ -10,8 +10,8 @@
     />
   </div>
   <div class="px-4 py-4">
-    <h4 class="font-bold text-2xl">{{ item.title }}</h4>
-    <h5 class="text-xs">
+    <h4 class="font-bold text-xl font-RobotoMono">{{ item.title }}</h4>
+    <h5 class="text-xs font-sans">
       {{ item.timestamp }} by <strong>{{ item.user_id.first_name }}</strong>
     </h5>
     <div class="text-gray-400">
@@ -19,7 +19,7 @@
         {{ item.body | safe | truncatechars_html:70 }}
         <a
           href="{% url 'blogApp:blog' item.id %}"
-          class="text-purple-700 hover:text-purple-600 transition delay-150 font-semibold dark:text-purple-600 dark:hover:text-purple-400"
+          class="text-purple-700 font-RobotoMono hover:text-purple-600 transition delay-150 font-semibold dark:text-purple-600 dark:hover:text-purple-400"
           >Read More</a
         >
       </p>
